@@ -1,0 +1,92 @@
+.wraper-box {
+    width: 100%;
+    height: 600px;
+    background-color: lightblue;
+    position: relative;
+
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s; */
+    transition: all 2s linear 1s;
+}
+.child-box {
+    width: 500px;
+    height: 500px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 3s;
+}
+.hello {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* hover effects */
+.wraper-box:hover{
+    background-color: red;
+}
+.child-box:hover {
+    background-color: rgb(47, 0, 255);
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+/* .wraper-box:hover .child-box {
+    background-color: blueviolet;
+} */
+
+
+/* animation */
+.image-car {
+    height: 400px;
+    /* animation-name: carmove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s; */
+    animation: carmove 5s alternate infinite 2s;
+    position: absolute;
+}
+.animation-block {
+    position: absolute;
+    height: 400px;
+}
+
+@keyframes carmove {
+    from {left:0;}
+    to {left: 700px;}
+}
+
+/* 2 example animation with car */
+.image-car2 {
+    height: 400px;
+    animation: carmoveanother 6s infinite;
+}
+
+@keyframes carmoveanother {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(150px);}
+    50% {transform: translateX(250px);}
+    75% {transform: translateX(350px);}
+    100% {transform: translateX(500px);}
+}
+
+
+/* --- */
+.image-new {
+    width: 700px;
+    height: 600px;
+}
+
+/* bg image */
+.bg-image {
+    height: 400px;
+    background-image: url('joze.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
